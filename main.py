@@ -66,9 +66,8 @@ def calculate_collateral_value(df, q=0.25, c=0.15, days=30):
                                dt["cnt"].rolling(days).sum()
 
     dt = dt[~dt["usd_cv"].isnull()]
-    # dt.index = dt.index.date.astype(str)
     data = dt[["usd_cv", "eth_cv"]].to_dict("index")
-    # print(data)
+
     return data
 
 
@@ -88,6 +87,3 @@ def main(path="../cryptopunks_01-14-2022_13-55-22_downloaded.csv"):
 
 if __name__ == "__main__":
     main()
-
-
-
