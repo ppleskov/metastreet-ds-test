@@ -1,1 +1,1 @@
-# metastreet-ds-test
+`poetry run python main.py`
